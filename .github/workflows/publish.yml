@@ -17,7 +17,7 @@ jobs:
           git config --global init.defaultBranch main
           git init
           git config user.name "github-actions[bot]"
-          git config user.email "1462379+fmakdemir@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m 'gh deployment'
           git push -f https://fmakdemir:${{ secrets.GITHUB_TOKEN }}@github.com/fmakdemir/ilovetrees-ui.git main:gh-pages
