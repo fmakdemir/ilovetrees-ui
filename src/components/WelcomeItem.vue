@@ -1,7 +1,7 @@
 <template>
   <div class="item">
-    <i>
-      <slot name="icon"></slot>
+    <i v-if="$slots.icon">
+      <slot v-if="$slots.icon" name="icon"></slot>
     </i>
     <div class="details">
       <h3>
