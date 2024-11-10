@@ -7,10 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     name: Build Vue
     steps:
-      - uses: actions/checkout@v2
-      - id: Build-Vue
-        uses: xRealNeon/VuePagesAction@1.0.1
-        with:
-          username: 'fmakdemir'
-          reponame: 'ilovetrees-ui'
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build Vue
+        run: |
+          yarn
+          yarn build
+          cd dist
+          ln -s index.html 404.html
+          git init
+          git add -A
+          git commit -m 'gh deployment'
+          git push -f https://fmakdemir:${{ secrets.GITHUB_TOKEN }}@github.com/fmakdemir/ilovetrees-ui.git master:gh-pages
+        shell: bash
