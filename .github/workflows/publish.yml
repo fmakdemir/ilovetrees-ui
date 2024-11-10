@@ -17,5 +17,5 @@ jobs:
           git init
           git add -A
           git commit -m 'gh deployment'
-          git push -f https://fmakdemir:${{ secrets.GITHUB_TOKEN }}@github.com/fmakdemir/ilovetrees-ui.git master:gh-pages
+          git push -f https://fmakdemir:${{ secrets.GITHUB_TOKEN }}@github.com/fmakdemir/ilovetrees-ui.git main:gh-pages
         shell: bash
