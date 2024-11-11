@@ -1,0 +1,17 @@
+when:
+  - event: push
+    branch: main
+
+steps:
+  install:
+    image: node
+    commands:
+      - yarn
+  build-site:
+    image: node
+    commands:
+      - yarn build
+  build-image:
+    image: woodpeckerci/plugin-docker-buildx
+    settings:
+      dry-run: true

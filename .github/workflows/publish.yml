@@ -5,10 +5,10 @@ on:
 jobs:
   build_vue:
     runs-on: ubuntu-latest
-    name: Build Vue
+    name: Vue build and publish
     steps:
       - uses: actions/checkout@v4
-      - name: Build Vue
+      - name: Build and publish gh-pages
         run: |
           yarn
           yarn build
