@@ -16,5 +16,5 @@ steps:
     settings:
       dockerfile: .woodpecker/Dockerfile
       repo: registry:5000/ilovetrees-ui
-      registry: registry:5000
+      registry: http://registry:5000
       tags: latest
