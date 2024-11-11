@@ -15,3 +15,5 @@ steps:
     image: woodpeckerci/plugin-docker-buildx
     settings:
       dry-run: true
+      repo: ilovetrees-ui
+      tags: latest

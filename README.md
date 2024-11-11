@@ -2,6 +2,8 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
+Design: https://www.figma.com/proto/zklpTbgCtBcL9d6cSyyA8P/iluvtreesdoyou%3F?node-id=1-2&starting-point-node-id=1%3A2&scaling=contain&device-frame=0&show-proto-sidebar=1
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
