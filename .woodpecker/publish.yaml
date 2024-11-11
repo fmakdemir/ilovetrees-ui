@@ -15,6 +15,6 @@ steps:
     image: woodpeckerci/plugin-docker-buildx
     settings:
       dockerfile: .woodpecker/Dockerfile
-      repo: registry:5000/ilovetrees-ui
-      registry: http://registry:5000
+      repo: localhost:5000/ilovetrees-ui
+      registry: http://localhost:5000
       tags: latest
