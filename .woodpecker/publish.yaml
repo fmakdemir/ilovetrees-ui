@@ -14,7 +14,7 @@ steps:
   build-image:
     image: woodpeckerci/plugin-docker-buildx
     settings:
-      dry-run: true
       dockerfile: .woodpecker/Dockerfile
-      repo: ilovetrees-ui
+      repo: localhost:5000/ilovetrees-ui
+      registry: localhost:5000
       tags: latest
