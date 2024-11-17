@@ -13,10 +13,13 @@ steps:
       - yarn build
   build-image:
     image: woodpeckerci/plugin-docker-buildx
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
     settings:
       dockerfile: .woodpecker/Dockerfile
       repo: ilovetrees-ui
       tags: latest
       dry-run: true
+  discord-notification:
+    image: appleboy/drone-discord
+    settings:
+      webhook_id: ${DISCORD_WEBHOOK_ID}
+      webhook_token: ${DISCORD_WEBHOOK_TOKEN}
