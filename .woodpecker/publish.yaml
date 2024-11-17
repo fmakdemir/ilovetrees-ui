@@ -13,6 +13,8 @@ steps:
       - yarn build
   build-image:
     image: woodpeckerci/plugin-docker-buildx
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     settings:
       dockerfile: .woodpecker/Dockerfile
       repo: ilovetrees-ui
