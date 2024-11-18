@@ -24,4 +24,4 @@ steps:
       webhook_id:
         from_secret: DISCORD_WEBHOOK_ID
       webhook_token:
-        from_secret: DISCORD_WEBHOOK_TOKEN}
+        from_secret: DISCORD_WEBHOOK_TOKEN
