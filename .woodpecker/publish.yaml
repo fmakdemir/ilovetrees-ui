@@ -3,10 +3,6 @@ when:
     branch: main
 
 steps:
-  install:
-    image: node
-    commands:
-      - yarn
   restore-cache:
     image: drillster/drone-volume-cache
     settings:
@@ -16,6 +12,11 @@ steps:
     # Mount the cache volume, needs "Trusted"
     volumes:
       - /tmp/cache:/cache
+
+  install:
+    image: node
+    commands:
+      - yarn
 
   build-site:
     image: node
