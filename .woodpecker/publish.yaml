@@ -35,6 +35,8 @@ steps:
 
   build-image:
     image: woodpeckerci/plugin-docker-buildx
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     commands:
       - docker builder prune -f # don't add -a here, it will destroy build cache
       - docker container prune -f
