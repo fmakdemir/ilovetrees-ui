@@ -7,10 +7,31 @@ steps:
     image: node
     commands:
       - yarn
+  restore-cache:
+    image: drillster/drone-volume-cache
+    settings:
+      restore: true
+      mount:
+        - ./node_modules
+    # Mount the cache volume, needs "Trusted"
+    volumes:
+      - /tmp/cache:/cache
+
   build-site:
     image: node
     commands:
       - yarn build
+
+  rebuild-cache:
+    image: drillster/drone-volume-cache
+    settings:
+      rebuild: true
+      mount:
+        - ./node_modules
+    # Mount the cache volume, needs "Trusted"
+    volumes:
+      - /tmp/cache:/cache
+
   build-image:
     image: woodpeckerci/plugin-docker-buildx
     settings:
@@ -18,6 +39,7 @@ steps:
       repo: ilovetrees-ui
       tags: latest
       dry-run: true
+
   discord-notification:
     image: appleboy/drone-discord
     settings:
